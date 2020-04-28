@@ -1,0 +1,9 @@
+@import './variables';
+@import './mixin';
+@import './transtion';
+@import './element-ui';
+@import './sidebar';
+//main-container全局样式
+.app-main {
+    min-height: 100%;
+}

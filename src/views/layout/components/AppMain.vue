@@ -1,14 +1,15 @@
 <template>
-    <div id="app">
-        <router-view></router-view>
+    <div>
+        右侧容器
     </div>
 </template>
 
 <script>
     export default {
-        name: 'App'
+        name: "AppMain"
     }
 </script>
 
-<style>
+<style scoped>
+
 </style>

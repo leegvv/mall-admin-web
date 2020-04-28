@@ -1,14 +1,15 @@
 <template>
-    <div id="app">
-        <router-view></router-view>
+    <div>
+        顶部菜单
     </div>
 </template>
 
 <script>
     export default {
-        name: 'App'
+        name: "Navbar"
     }
 </script>
 
-<style>
+<style scoped>
+
 </style>

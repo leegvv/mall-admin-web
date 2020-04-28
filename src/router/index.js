@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import Layout from '../views/layout/Layout';
 
 Vue.use(Router);
 
@@ -15,9 +16,19 @@ Vue.use(Router);
     icon: 'svg-name'             the icon show in the sidebar,
   }
  **/
-export const constantRouterMap = {
-
-};
+export const constantRouterMap = [
+    {
+        path: '',
+        component: Layout,
+        redirect: '/home',
+        children: [{
+            path: 'home',
+            name: 'home',
+            component: () => import('@/views/home/index'),
+            meta: {title: '首页', icon: 'home'}
+        }]
+    }
+];
 
 export default new Router({
     // mode: 'history', //后端支持可开
