@@ -18,6 +18,16 @@ Vue.use(Router);
  **/
 export const constantRouterMap = [
     {
+        path: '/login',
+        component: () => import('@/views/login/index'),
+        hidden: true
+    },
+    {
+      path: '404',
+      component: () => import('@/views/404'),
+      hidden: true
+    },
+    {
         path: '',
         component: Layout,
         redirect: '/home',
@@ -27,6 +37,29 @@ export const constantRouterMap = [
             component: () => import('@/views/home/index'),
             meta: {title: '首页', icon: 'home'}
         }]
+    }
+];
+
+export const asyncRouterMap = [
+    {
+        path: '/ums',
+        component: Layout,
+        redirect: '/ums/admin',
+        name: 'ums',
+        meta: {title: '权限', icon: 'ums'},
+        children: [
+            {
+                path: 'admin',
+                name: 'admin',
+                component: () => import('@/views/ums/admin/index'),
+                meta: {title: '用户列表', icon: 'ums-admin'}
+            }
+        ]
+    },
+    {
+        path: '*',
+        redirect: '/404',
+        hidden: true
     }
 ];
 
