@@ -1,7 +1,9 @@
 <template>
-    <div>
-        右侧容器
-    </div>
+    <section class="app-main">
+        <transition name="fade" mode="out-in">
+            <router-view></router-view>
+        </transition>
+    </section>
 </template>
 
 <script>

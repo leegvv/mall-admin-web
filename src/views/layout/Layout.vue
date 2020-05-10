@@ -10,6 +10,7 @@
 
 <script>
     import { AppMain,  Navbar, Sidebar } from './components';
+    import ResizeHandler from './mixin/ResizeHandler';
 
     export default {
         name: 'layout',
@@ -19,10 +20,19 @@
             Sidebar,
             AppMain
         },
+        mixins: [ResizeHandler],
         computed: {
+            sidebar() {
+              return this.$store.state.app.sidebar;
+            },
+            device() {
+                return this.$store.state.app.device;
+            },
             classObj() {
                 return {
-
+                    hideSidebar: !this.sidebar.opened,
+                    withoutAnimation: this.sidebar.withoutAnimation,
+                    mobile: this.device === 'mobile'
                 };
             }
         }
