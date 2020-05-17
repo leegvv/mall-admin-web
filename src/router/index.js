@@ -59,6 +59,25 @@ export const asyncRouterMap = [
                 name: 'role',
                 component: () => import('@/views/ums/admin/index'),
                 meta: {title: '角色列表', icon: 'ums-role'}
+            },
+            {
+                path: 'menu',
+                name: 'menu',
+                component: () => import('@/views/ums/menu/index'),
+                meta: {title: '菜单列表', icon: 'ums-menu'}
+            },
+            {
+                path: 'resource',
+                name: 'resource',
+                component: () => import('@/views/ums/resource/index'),
+                meta: {title: '资源列表', icon: 'ums-resource'}
+            },
+            {
+                path: 'resourceCategory',
+                name: 'resourceCategory',
+                component: () => import('@/views/ums/resource/categoryList'),
+                meta: {title: '资源分类'},
+                hidden: true
             }
         ]
     },
