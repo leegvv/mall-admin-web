@@ -145,7 +145,7 @@
                 }
             },
             handleAddMenu() {
-                this.$route.push('/ums/addMenu');
+                this.$router.push('/ums/addMenu');
             },
             getList() {
                 this.listLoading = false;
