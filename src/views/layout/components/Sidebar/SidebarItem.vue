@@ -66,7 +66,6 @@
 
         },
         mounted() {
-            console.log(this.routes)
         }
     }
 </script>
