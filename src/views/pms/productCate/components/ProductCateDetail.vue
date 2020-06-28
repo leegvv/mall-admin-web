@@ -70,7 +70,7 @@
 <script>
     import {fetchList, createProductCate, updateProductCate, getProductCate} from '@/api/productCate';
     import {fetchListWithAttr} from '@/api/productAttrCate';
-    import {getProductAttrInfo} from '@/api/productAttr';
+    import {getProductAttr} from '@/api/productAttr';
     import SingleUpload from '@/components/Upload/singleUpload';
 
     const defaultProductCate = {
@@ -116,7 +116,7 @@
                 getProductCate(this.$route.query.id).then((response) => {
                     this.productCate = response.data;
                 });
-                getProductAttrInfo(this.$route.query.id).then(response => {
+                getProductAttr(this.$route.query.id).then(response => {
                     if (response.data != null && response.data.length > 0) {
                         this.filterProductAttrList = [];
                         for (let i = 0; i < response.data.list; i++) {
